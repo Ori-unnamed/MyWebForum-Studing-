@@ -1,0 +1,174 @@
+﻿nav {
+    background-color: white;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 36px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px 0px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+
+.nav_a_big {
+    color: black;
+    height: 56px;
+    line-height: 40px;
+    margin-left: 20px;
+    margin-right: 15px;
+    text-align: center;
+    font-size: 24px;
+    text-decoration:none;
+}
+
+#nav_head {
+    display: inline-flex;
+    flex-direction: row;
+    align-items:center;
+    margin-right:30px;
+}
+
+#nav_end {
+    display: inline-flex;
+    flex-direction: row;
+    align-items:center;
+    margin-left:45px;
+}
+#nav_ul {
+    display:inline-flex;
+    overflow:hidden;
+    list-style-type:none;
+    height:40px;
+    margin:0;
+}
+#nav_ul_li{
+    overflow:hidden;
+    display:inline-flex;
+}
+
+#search_img {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+
+#search_input {
+    width: 180px;
+    padding: 0;
+    border: 0;
+    outline: none;
+    height: 25px;
+    background-color: inherit;
+}
+
+
+#search_box {
+    display:inline-flex;
+    background-color: #f6f6f6;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    padding-left: 15px;
+    padding-top: 4px;
+    padding-right: 1px;
+    padding-bottom: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.nav_a_small {
+    background-color:white;
+    color: black;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    line-height: inherit;
+    text-align: center;
+    font-size: inherit;
+    margin-right: 10px;
+    text-decoration:none;
+    
+}
+
+.nav_a_small:hover{
+    color:rgb(155, 150, 150);
+}
+
+#usermessage {
+    float: left;
+    width: 200px;
+    height: auto;
+    box-sizing: border-box;
+    margin-left: -200px;
+    box-shadow: rgba(0, 0, 0, 0.05) 4px 4px 12px 0px;
+}
+
+#user_img {
+    margin: 20px;
+    height: 200px;
+    width: 150px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px 0px;
+}
+
+#user_ul {
+    list-style: none;
+    align-items: center;
+}
+
+.uer_ul_li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    clear: both;
+}
+
+#content {
+    overflow:hidden;
+    float: left;
+    width:100%;
+    height:1000px;
+}
+
+#container {
+    background-color: rgb(228, 222, 222);
+    padding-left:200px;
+}
+
+
+
+.logandreg {
+    display: none;
+    padding: 20px;
+}
+
+.login_patten {
+    margin-bottom: 25px;
+}
+.login_p{
+    color:red;
+    display:inline;
+}
+.login_input {
+    border: 0;
+    outline: none;
+}
+.login_hr{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.buttons{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-evenly;
+}
+.log_button{
+    width:100px;
+    height:40px;
+}

@@ -1,0 +1,27 @@
+﻿div#markdown_test {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
+.test-textarea {
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    height: 800px;
+    border: 2px;
+    border-style: inset;
+    float: left;
+    padding: 10px;
+}
+.markdown-body {
+    display: inline-block;
+    width: 40%;
+    margin: 0;
+    height: 800px;
+    border: 2px;
+    border-style: inset;
+    float: left;
+    padding: 10px;
+}

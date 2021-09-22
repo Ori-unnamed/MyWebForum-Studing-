@@ -1,0 +1,54 @@
+﻿@model Tuple<Useraccount, Userprofile>
+@section head
+{
+
+    <link rel="stylesheet" href="~/css/Blogs/Create.css" />
+    <link rel="stylesheet" href="~/css/Blogs/github-markdown.css" />
+    <link rel="stylesheet" href="~/css/AccountProfile.css"/>
+}
+@section leftFrame
+{
+    <img id="user_img" />
+    <ul id="user_ul">
+        <li class="uer_ul_li">粉丝数</li>
+        <li class="uer_ul_li">关注</li>
+    </ul>
+}
+
+@section JavaScript
+{
+    <script src="~/showdown/dist/showdown.js"></script>
+    <script src="~/js/Blogs_Create.js"></script>
+}
+
+<div id="user_profile_block">
+    <div id="avatar_and_changes">
+        <img id="img_avatar" src="data:images/gif;base64, @Convert.ToBase64String(Model.Item2.Avatar)" type="image/jpeg" />
+        <br />
+        <ul >
+            <li>
+                <a>修改头像</a>
+            </li>
+            <li>
+                <a>博客首页</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="profiles">
+        <div>
+            <a>名称：@Model.Item1.UserName</a>
+            <ul id="profile_list">
+                <li>
+                    <a>id：@Model.Item1.UserNo</a>
+                </li>
+                <li>
+                    <a>入园时间：@Model.Item1.RegTime</a>
+                </li>
+                <li>
+                    <a>昵称：@Model.Item1.UserNickname</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿#img_avatar {
+    width:200px;
+    height:200px;
+}
+#avatar_and_changes {
+    display:inline-block;
+    float:left;
+}
+#profiles {
+    display:inline-block;
+    float:left;
+}
+#avatar_and_changes{
+    overflow:hidden;
+    width:auto;
+
+}
+#profiles {
+    overflow: hidden;
+    width: auto;
+    padding-left:20px;
+}
+#profile_list{
+    list-style:none;
+    padding-left:0;
+}

@@ -1,0 +1,129 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using MyWebForum.Models
+
+@inject SignInManager<Useraccount> SignInManager
+@inject UserManager<Useraccount> UserManager
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/LayoutStyle.css" />
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    <script src="~/layui.js"></script>
+    @RenderSection("head")
+</head>
+<body>
+    <div id="application">
+        <nav>
+            <div id="nav_head">
+                <a class="nav_a_big" href="www.baidu.com">我的网页</a>
+                <ul id="nav_ul">
+                    <li class="nav_ul_li">
+                        <a class="nav_a_small" href="https://localhost:44384/Account/Index">个人主页</a>
+                    </li>
+                    <li class="nav_ul_li">
+                        <a class="nav_a_small">你好</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search_box">
+                <input id="search_input" name="search_input" />
+                <img id="search_img" src="~/img/search.jpeg" />
+            </div>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <div id="nav_end">
+                    <a class="nav_a_small">@UserManager.GetUserName(User)</a>
+                    <a class="nav_a_small" href="https://localhost:44384/Account/Logout">注销</a>
+                </div>
+            }
+            else
+            {
+                <div id="nav_end">
+                    <a class="nav_a_small" id="log_in" href="javascript:void(0);" onclick="js_login()">登录</a>
+                    <a class="nav_a_small" id="reg_in" href="javascript:void(0)" onclick="js_regin()">注册</a>
+                </div>
+            }
+
+        </nav>
+        <div id="container">
+            <div id="usermessage">
+                @RenderSection("leftFrame")         
+            </div>
+
+            <div id="content">
+                @RenderBody()
+            </div>
+            <div id="right_items">
+
+            </div>
+        </div>
+        <footer>
+            @@2021-刘展赫
+        </footer>
+
+    </div>
+    
+    <div id="login" class="logandreg">
+        <div class="login_patten">
+            <p class="login_p">*</p>
+            <label class="login_label">用户名:</label>
+            <input class="login_input" placeholder="输入用户名" id="username_log" name="user_name" />
+            <hr class="login_hr" />
+        </div>
+        <div class="login_patten">
+            <p class="login_p">*</p>
+            <label class="login_label">密码:</label>
+            <input class="login_input" placeholder="输入密码" id="userpwd_log" name="user_pwd" />
+            <hr class="login_hr" />
+        </div>
+        <div class="buttons">
+            <button class="log_button" id="login_conf">
+                确认
+            </button>
+            <button class="log_button">
+                取消
+            </button>
+        </div>
+    </div>
+    <div id="regin" class="logandreg" method="post" action="~/Account/Reg_in">
+        <div class="login_patten">
+            <p class="login_p">*</p>
+            <label class="login_label">用户名:</label>
+            <input class="login_input" id="username_reg" name="user_name" />
+            <hr class="login_hr" />
+        </div>
+        <div class="login_patten">
+            <p class="login_p">*</p>
+            <label class="login_label">密码:</label>
+            <input type="password" class="login_input" placeholder="输入密码" id="userpwd_reg" name="user_pwd" />
+            <hr class="login_hr" />
+        </div>
+        <div class="login_patten">
+            <p class="login_p">*</p>
+            <label class="login_label">确认密码:</label>
+            <input type="password" class="login_input" placeholder="请再次输入密码" id="userpwd_conf_reg" name="user_pwd_conf" />
+            <hr class="login_hr" />
+        </div>
+        <div class="buttons">
+            <button class="log_button" id="regin_conf">
+                确认
+            </button>
+            <button class="log_button">
+                取消
+            </button>
+        </div>
+    </div>
+
+    <script src="~/js/Account.js"></script>
+    @RenderSection("JavaScript")
+
+</body>
+
+</html>
